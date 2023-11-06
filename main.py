@@ -16,7 +16,6 @@ async def lifespan(app: FastAPI):
     yield
 
 
-
 app = FastAPI(lifespan=lifespan)
 app.include_router(items_router)
 app.include_router(users_router)
@@ -26,7 +25,8 @@ app.include_router(users_router)
 @app.get("/")
 def hello_index():
     return {
-        "message": "Hello index!", }
+        "message": "Hello index!",
+    }
 
 
 @app.get("/hello")
