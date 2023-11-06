@@ -1,7 +1,5 @@
-from fastapi import APIRouter
-from typing import Annotated
 from fastapi import APIRouter, Path
-
+from typing import Annotated
 
 router = APIRouter(prefix="/items", tags=["Items"])
 
@@ -13,7 +11,6 @@ def list_items():
         "Item2",
         "Item3",
     ]
-
 
 
 @router.get("/latest")
